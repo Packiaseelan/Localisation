@@ -11,7 +11,10 @@ import SwiftUI
 struct HexLocalisationExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(Localisation.shared)
         }
     }
 }

@@ -25,9 +25,7 @@ class LanguageContentManager {
     /// open container for selected language.
     /// ```
     private func openContainer() {
-        if localRealm != nil {
-            return
-        }
+        localRealm = nil
         guard
             let name = UserDefaults.standard.string(forKey: "selectedLanguage"),
             let url = getFileUrl(for: name) else { return }
@@ -62,9 +60,9 @@ class LanguageContentManager {
     }
     
     func insertAll(contents: [LanguageContent]) {
-        if localRealm == nil {
-            openContainer()
-        }
+        
+        openContainer()
+        
         do {
             try localRealm?.write({
                 contents.forEach { content in

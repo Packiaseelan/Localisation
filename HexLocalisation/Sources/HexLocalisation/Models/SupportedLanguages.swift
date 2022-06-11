@@ -53,10 +53,10 @@ struct SupportedLanguageResponse: Codable {
 }
 
 public struct SupportedLang: Identifiable, Codable {
-    let languageId: String
-    let language: String
-    let displayContent: String
-    var iconPath: String? = ""
+    public let languageId: String
+    public let language: String
+    public let displayContent: String
+    public var iconPath: String? = ""
     
     public var id: String {
         return self.languageId

@@ -12,6 +12,8 @@
 		E4A19F702854F18B000841C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A19F6F2854F18B000841C6 /* Assets.xcassets */; };
 		E4A19F732854F18B000841C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A19F722854F18B000841C6 /* Preview Assets.xcassets */; };
 		E4A19F7D2854F230000841C6 /* HexLocalisation in Frameworks */ = {isa = PBXBuildFile; productRef = E4A19F7C2854F230000841C6 /* HexLocalisation */; };
+		E4A19F7F2854F333000841C6 /* Localisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F7E2854F333000841C6 /* Localisation.swift */; };
+		E4A19F812854F88D000841C6 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F802854F88D000841C6 /* SelectLanguageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E4A19F6F2854F18B000841C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A19F722854F18B000841C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4A19F7A2854F19E000841C6 /* HexLocalisation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HexLocalisation; path = ../HexLocalisation; sourceTree = "<group>"; };
+		E4A19F7E2854F333000841C6 /* Localisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisation.swift; sourceTree = "<group>"; };
+		E4A19F802854F88D000841C6 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				E4A19F6B2854F18B000841C6 /* HexLocalisationExampleApp.swift */,
 				E4A19F6D2854F18B000841C6 /* ContentView.swift */,
+				E4A19F802854F88D000841C6 /* SelectLanguageView.swift */,
+				E4A19F7E2854F333000841C6 /* Localisation.swift */,
 				E4A19F6F2854F18B000841C6 /* Assets.xcassets */,
 				E4A19F712854F18B000841C6 /* Preview Content */,
 			);
@@ -162,6 +168,8 @@
 			files = (
 				E4A19F6E2854F18B000841C6 /* ContentView.swift in Sources */,
 				E4A19F6C2854F18B000841C6 /* HexLocalisationExampleApp.swift in Sources */,
+				E4A19F812854F88D000841C6 /* SelectLanguageView.swift in Sources */,
+				E4A19F7F2854F333000841C6 /* Localisation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

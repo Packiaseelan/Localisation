@@ -30,9 +30,6 @@ let package = Package(
             dependencies: [
 //                .product(name: "HexRealmWrap", package: "HexRealmWrap")
                 .product(name: "RealmSwift", package: "realm-swift")
-            ],
-            resources: [
-                .process("MockData/supported_languages.json")
             ]
         ),
         .testTarget(
