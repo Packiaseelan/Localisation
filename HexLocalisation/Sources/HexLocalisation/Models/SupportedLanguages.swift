@@ -62,6 +62,13 @@ public struct SupportedLang: Identifiable, Codable {
         return self.languageId
     }
     
+    public init(languageId: String, language: String, displayContent: String, iconPath: String = "") {
+        self.languageId = languageId
+        self.language = language
+        self.displayContent = displayContent
+        self.iconPath = iconPath
+    }
+    
     /// ```
     /// Convert model to database object
     /// ```
