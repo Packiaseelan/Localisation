@@ -1,0 +1,32 @@
+{
+  "status_code": 200,
+  "message": null,
+  "supported_language": [
+    {
+      "languageId": "lang-001",
+      "language": "English",
+      "displayContent": "Welcome",
+      "icon_path": "https://www.hexlocalisation.com/icons/english.png"
+    },
+    {
+      "languageId": "lang-002",
+      "language": "Tamil",
+      "displayContent": "வரவேற்பு"
+    },
+    {
+      "languageId": "lang-003",
+      "language": "Malayalam",
+      "displayContent": "സ്വാഗതം"
+    },
+    {
+      "languageId": "lang-004",
+      "language": "Telugu",
+      "displayContent": "స్వాగతం"
+    },
+    {
+      "languageId": "lang-005",
+      "language": "Hindi",
+      "displayContent": "स्वागत हे"
+    }
+  ]
+}
