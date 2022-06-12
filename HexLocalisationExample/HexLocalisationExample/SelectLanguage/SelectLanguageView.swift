@@ -34,10 +34,12 @@ struct SelectLanguageView: View {
             .listStyle(PlainListStyle())
             button
         }
-        .onAppear {
-            if let langId = selectedLanguageId {
-                selectedId = langId
-            }
+        .onAppear(perform: onAppear)
+    }
+    
+    func onAppear() {
+        if let langId = selectedLanguageId {
+            selectedId = langId
         }
     }
     
