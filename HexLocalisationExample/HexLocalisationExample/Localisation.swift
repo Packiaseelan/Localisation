@@ -20,7 +20,7 @@ class Localisation: ObservableObject {
         )
     }
     
-    func getSupportedlanguages() -> [SupportedLang] {
+    func getSupportedlanguages() -> [SupportedLanguage] {
         return localisation.getSupportedLanguages()
     }
     

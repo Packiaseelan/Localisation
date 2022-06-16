@@ -15,11 +15,11 @@ class DataRepository {
     
     private init() {}
     
-    func getSUpportedLanguages() -> [SupportedLang] {
+    func getSUpportedLanguages() -> [SupportedLanguage] {
         let supLangs = data.getSupportedLanguages()
-        var langs: [SupportedLang] = []
+        var langs: [SupportedLanguage] = []
         for supLang in supLangs {
-            let lng = SupportedLang(languageId: supLang.languageId!,
+            let lng = SupportedLanguage(languageId: supLang.languageId!,
                                     language: supLang.language!,
                                     displayContent: supLang.displayContent!,
                                     iconPath: supLang.iconPath ?? "")
@@ -28,9 +28,9 @@ class DataRepository {
         return langs
     }
     
-    func getLanguage(for languageId: String) -> SupportedLang? {
+    func getLanguage(for languageId: String) -> SupportedLanguage? {
         if let lang = data.getLanguage(for: languageId) {
-            return SupportedLang(languageId: lang.languageId!,
+            return SupportedLanguage(languageId: lang.languageId!,
                           language: lang.language!,
                           displayContent: lang.displayContent!,
                           iconPath: lang.iconPath ?? "")
@@ -38,7 +38,7 @@ class DataRepository {
         return nil
     }
     
-    func saveSupportedLanguages(languages: [SupportedLang]) {
+    func saveSupportedLanguages(languages: [SupportedLanguage]) {
         for lang in languages {
             let langEntity = SupportedLanguagesEntity(context: data.viewContext)
             langEntity.languageId = lang.languageId
@@ -53,12 +53,12 @@ class DataRepository {
         }
     }
     
-    func getContents(for languageId: String) -> [LangContent] {
+    func getContents(for languageId: String) -> [LanguageContent] {
         let localContents = data.getLanguageContent(for: languageId)
-        var contents: [LangContent] = []
+        var contents: [LanguageContent] = []
         for content in localContents {
             contents.append(
-                LangContent(
+                LanguageContent(
                     id: "\(content.id)",
                     languageId: content.languageId!,
                     key: content.key!,
@@ -69,7 +69,7 @@ class DataRepository {
         return contents
     }
     
-    func saveLanguageContents(_ contents: [LangContent]) {
+    func saveLanguageContents(_ contents: [LanguageContent]) {
         for content in contents {
             let entity = LanguageContentEntity(context: data.viewContext)
             entity.serverId = content.id
