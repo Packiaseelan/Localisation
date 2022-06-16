@@ -6,27 +6,27 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
 
-class SupportedLanguage: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var languageId = ""
-    @Persisted var language = ""
-    @Persisted var displayContent = ""
-    @Persisted var iconPath = ""
-    
-    /// ```
-    /// Convert to data model
-    /// ```
-    func toModel() -> SupportedLang {
-        return SupportedLang(
-            languageId: self.languageId,
-            language: self.language,
-            displayContent: self.displayContent,
-            iconPath: self.iconPath
-        )
-    }
-}
+//class SupportedLanguage: Object, ObjectKeyIdentifiable {
+//    @Persisted(primaryKey: true) var id: ObjectId
+//    @Persisted var languageId = ""
+//    @Persisted var language = ""
+//    @Persisted var displayContent = ""
+//    @Persisted var iconPath = ""
+//
+//    /// ```
+//    /// Convert to data model
+//    /// ```
+//    func toModel() -> SupportedLang {
+//        return SupportedLang(
+//            languageId: self.languageId,
+//            language: self.language,
+//            displayContent: self.displayContent,
+//            iconPath: self.iconPath
+//        )
+//    }
+//}
 
 struct SupportedLanguageResponse: Codable {
     let statusCode: Int
@@ -69,18 +69,18 @@ public struct SupportedLang: Identifiable, Codable {
         self.iconPath = iconPath
     }
     
-    /// ```
-    /// Convert model to database object
-    /// ```
-    func toObject() -> SupportedLanguage {
-        return SupportedLanguage(
-            value: [
-                "languageId": self.languageId,
-                "language": self.language,
-                "displayContent": self.displayContent,
-                "iconPath": self.iconPath
-            ]
-        )
-    }
+//    /// ```
+//    /// Convert model to database object
+//    /// ```
+//    func toObject() -> SupportedLanguage {
+//        return SupportedLanguage(
+//            value: [
+//                "languageId": self.languageId,
+//                "language": self.language,
+//                "displayContent": self.displayContent,
+//                "iconPath": self.iconPath
+//            ]
+//        )
+//    }
 }
 

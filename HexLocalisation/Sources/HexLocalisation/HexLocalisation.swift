@@ -8,7 +8,7 @@ public struct HexLocalisation {
     private let appId: String
     private let apiKey: String
     private var contentCache : NSCache<NSString, NSString>
-    private let manager = RealmManager.shared
+    private let repo = DataRepository.shared
     
     /// ```
     /// Initialize the HexLocalisation with your app_id and api_key
@@ -28,9 +28,8 @@ public struct HexLocalisation {
     /// ```
     public func getSupportedLanguages() -> [SupportedLang] {
         // get supported languages for appId
-        let supported = manager.suppotredLang.getLanguageContent()
+        let supported  = repo.getSUpportedLanguages()
         if supported.isEmpty {
-            print("supported language from temp")
             // TODO: make API call to get the supported language and store in local
             
             // store in local
@@ -39,13 +38,7 @@ public struct HexLocalisation {
             return supportedLanguages
         }
         
-        var list: [SupportedLang] = []
-        supported.forEach { supLang in
-            list.append(supLang.toModel())
-        }
-        
-        print("supported language from local database")
-        return list
+        return supported
     }
     
     /// ```
@@ -56,7 +49,7 @@ public struct HexLocalisation {
         // clear cache before switch language
         clearCache()
         // update selected language in AppStorage
-        if let lang = manager.suppotredLang.getLanguage(languageId: languageId) {
+        if let lang = repo.getLanguage(for: languageId) {
             selectedLanguage = lang.language
             selectedLanguageId = lang.languageId
             getLanguageContents(languagaeId: languageId)
@@ -122,35 +115,21 @@ public struct HexLocalisation {
     /// ```
     private func saveLanguageContents(contents: [LangContent]) {
         // save or update languade contents to the local database
-        var cont: [LanguageContent] = []
-        contents.forEach { eng in
-            cont.append( eng.toObject())
-        }
-        manager.langContent.insertAll(contents: cont)
+        repo.saveLanguageContents(contents)
     }
     
     private func saveSupportedLanguages(languages: [SupportedLang]) {
-        var supported: [SupportedLanguage] = []
-        
-        languages.forEach { supLng in
-            supported.append(supLng.toObject())
-        }
-        
-        manager.suppotredLang.insertAll(contents: supported)
+        repo.saveSupportedLanguages(languages: languages)
     }
     
     /// ```
     /// Get the language content form local database
     /// ```
     private func loadCache() {
-        // fetch from local database
-        let con = manager.langContent.getLanguageContent()
-        var co: [LangContent] = []
-        // conver to model
-        con.forEach { c in
-            co.append(c.toModel())
+        if let langId = selectedLanguageId {
+            let contents = repo.getContents(for: langId)
+            cacheLanguageContents(contents: contents)
         }
-        cacheLanguageContents(contents: co)
     }
     
     /// ```
@@ -160,7 +139,6 @@ public struct HexLocalisation {
         contents.forEach { content in
             contentCache.setObject(content.content as NSString, forKey: content.key as NSString)
         }
-        print("language content loaded into cache.")
     }
     
     private func clearCache() {
@@ -172,8 +150,8 @@ public struct HexLocalisation {
     /// Check [selectedLanguage] content available in local
     /// ```
     private func checkLocalStorage() -> Bool {
-        if let lang = selectedLanguage {
-            return manager.isContainerExists(for: lang)
+        if let langId = selectedLanguageId {
+            return repo.isContentAvailable(for: langId)
         }
         return false
     }
