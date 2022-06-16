@@ -59,10 +59,10 @@ public struct HexLocalisation {
     /// ```
     /// Gets the String value for the key provided.
     /// ```
-    public func getString(for key: String) -> String {
+    public func getString(for key: String, defaultValue: String? = nil) -> String {
         let content = contentCache.object(forKey: key as NSString)
         let contentString = content as? String
-        return contentString ?? key
+        return contentString ?? defaultValue ?? key
     }
     
     /// ```
