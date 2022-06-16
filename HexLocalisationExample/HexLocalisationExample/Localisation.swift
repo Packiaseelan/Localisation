@@ -14,13 +14,15 @@ class Localisation: ObservableObject {
     let localisation: HexLocalisation
     
     private init() {
+        let bundleId = Bundle.main.bundleIdentifier ?? ""
+        
         localisation = HexLocalisation(
-            appId: "com.hexcreators.HexLocalisationExample",
+            appId: bundleId,
             apiKey: "QWERTY1231"
         )
     }
     
-    func getSupportedlanguages() -> [SupportedLang] {
+    func getSupportedlanguages() -> [SupportedLanguage] {
         return localisation.getSupportedLanguages()
     }
     
@@ -28,7 +30,7 @@ class Localisation: ObservableObject {
         localisation.selectLanguage(languageId: languageId)
     }
     
-    func getString(for key: String) -> String {
-        return localisation.getString(for: key)
+    func getString(for key: String, defaultValue: String? = nil) -> String {
+        return localisation.getString(for: key, defaultValue: defaultValue)
     }
 }

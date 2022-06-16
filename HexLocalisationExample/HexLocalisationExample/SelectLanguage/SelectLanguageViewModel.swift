@@ -12,7 +12,7 @@ class SelectLanguageViewModel: ObservableObject {
     
     let localisation = Localisation.shared
     
-    @Published var supportedLanguages: [SupportedLang] = []
+    @Published var supportedLanguages: [SupportedLanguage] = []
     
     init() {
         supportedLanguages = localisation.getSupportedlanguages()

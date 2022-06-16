@@ -27,6 +27,10 @@ struct ContentView: View {
             desription
             question
             answer
+            Divider()
+                .padding(.vertical)
+            defaultValue
+            defaultValue2
             
             Spacer()
         }
@@ -104,6 +108,18 @@ extension ContentView {
     
     private var answer: some View {
         Text(localisation.getString(for: "answer"))
+            .font(.body)
+            .foregroundColor(.secondary)
+    }
+    
+    private var defaultValue: some View {
+        Text(localisation.getString(for: "default", defaultValue: "Default value form app"))
+            .font(.body)
+            .foregroundColor(.secondary)
+    }
+    
+    private var defaultValue2: some View {
+        Text(localisation.getString(for: "default_key"))
             .font(.body)
             .foregroundColor(.secondary)
     }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LanguageContentEntity" representedClassName="LanguageContentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="content" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="key" attributeType="String"/>
+        <attribute name="languageId" attributeType="String"/>
+        <attribute name="serverId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SupportedLanguagesEntity" representedClassName="SupportedLanguagesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="displayContent" attributeType="String"/>
+        <attribute name="iconPath" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="language" attributeType="String"/>
+        <attribute name="languageId" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="LanguageContentEntity" positionX="-2162.78125" positionY="3804.53125" width="209.90625" height="118"/>
+        <element name="SupportedLanguagesEntity" positionX="-2383.203125" positionY="3800.171875" width="188.90625" height="104"/>
+    </elements>
+</model>

@@ -10,7 +10,7 @@ import HexLocalisation
 
 struct LanguageRowView: View {
     
-    let lang: SupportedLang
+    let lang: SupportedLanguage
     let isSelected: Bool
     
     var body: some View {
@@ -37,7 +37,7 @@ struct LanguageRowView: View {
 
 
 struct LanguageRowView_Previews: PreviewProvider {
-    static let lang = SupportedLang(languageId: "1", language: "English", displayContent: "Welcome", iconPath: "")
+    static let lang = SupportedLanguage(languageId: "1", language: "English", displayContent: "Welcome", iconPath: "")
     static var previews: some View {
         
         Group {
