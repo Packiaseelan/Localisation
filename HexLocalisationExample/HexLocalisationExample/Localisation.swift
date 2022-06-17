@@ -15,10 +15,17 @@ class Localisation: ObservableObject {
     
     private init() {
         let bundleId = Bundle.main.bundleIdentifier ?? ""
+        var apiKey: String = ""
+        
+        do {
+            apiKey = try Configuration.value(for: "Hex_Localisation_API_Key")
+        } catch {
+            print("Hex_Localisation_API_Key not available in property list.")
+        }
         
         localisation = HexLocalisation(
             appId: bundleId,
-            apiKey: "QWERTY1231"
+            apiKey: apiKey
         )
     }
     
