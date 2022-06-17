@@ -11,7 +11,7 @@ import HexLocalisation
 class Localisation: ObservableObject {
     static let shared = Localisation()
     
-    let localisation: HexLocalisation
+    private let localisation: HexLocalisation
     
     private init() {
         let bundleId = Bundle.main.bundleIdentifier ?? ""
