@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4648290285CF53A0090568B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464828F285CF53A0090568B /* Configuration.swift */; };
 		E4A19F6C2854F18B000841C6 /* HexLocalisationExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F6B2854F18B000841C6 /* HexLocalisationExampleApp.swift */; };
 		E4A19F6E2854F18B000841C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F6D2854F18B000841C6 /* ContentView.swift */; };
 		E4A19F702854F18B000841C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A19F6F2854F18B000841C6 /* Assets.xcassets */; };
@@ -19,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E464828A285CCFA60090568B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		E464828B285CCFD40090568B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		E464828C285CF4D60090568B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		E464828F285CF53A0090568B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E4648291285CF6F30090568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E4A19F682854F18B000841C6 /* HexLocalisationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexLocalisationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A19F6B2854F18B000841C6 /* HexLocalisationExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexLocalisationExampleApp.swift; sourceTree = "<group>"; };
 		E4A19F6D2854F18B000841C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4648289285CCF830090568B /* config */ = {
+			isa = PBXGroup;
+			children = (
+				E464828A285CCFA60090568B /* Development.xcconfig */,
+				E464828C285CF4D60090568B /* Debug.xcconfig */,
+				E464828B285CCFD40090568B /* Release.xcconfig */,
+				E464828F285CF53A0090568B /* Configuration.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 		E4A19F5F2854F18B000841C6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +81,8 @@
 		E4A19F6A2854F18B000841C6 /* HexLocalisationExample */ = {
 			isa = PBXGroup;
 			children = (
+				E4648291285CF6F30090568B /* Info.plist */,
+				E4648289285CCF830090568B /* config */,
 				E4A19F822855226F000841C6 /* SelectLanguage */,
 				E4A19F6B2854F18B000841C6 /* HexLocalisationExampleApp.swift */,
 				E4A19F6D2854F18B000841C6 /* ContentView.swift */,
@@ -182,6 +201,7 @@
 			files = (
 				E4A19F84285522AA000841C6 /* LanguageRowView.swift in Sources */,
 				E4A19F6E2854F18B000841C6 /* ContentView.swift in Sources */,
+				E4648290285CF53A0090568B /* Configuration.swift in Sources */,
 				E4A19F8628552960000841C6 /* SelectLanguageViewModel.swift in Sources */,
 				E4A19F6C2854F18B000841C6 /* HexLocalisationExampleApp.swift in Sources */,
 				E4A19F812854F88D000841C6 /* SelectLanguageView.swift in Sources */,
@@ -192,8 +212,102 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		E464828D285CF4EE0090568B /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828A285CCFA60090568B /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Development;
+		};
+		E464828E285CF4EE0090568B /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828A285CCFA60090568B /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HexLocalisationExample/Preview Content\"";
+				DEVELOPMENT_TEAM = BQH36CFX55;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HexLocalisationExample/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hexcreators.HexLocalisationExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
 		E4A19F742854F18B000841C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828C285CF4D60090568B /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -254,6 +368,7 @@
 		};
 		E4A19F752854F18B000841C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828B285CCFD40090568B /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -308,6 +423,7 @@
 		};
 		E4A19F772854F18B000841C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828C285CF4D60090568B /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +433,8 @@
 				DEVELOPMENT_TEAM = BQH36CFX55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HexLocalisationExample/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +455,7 @@
 		};
 		E4A19F782854F18B000841C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E464828B285CCFD40090568B /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +465,8 @@
 				DEVELOPMENT_TEAM = BQH36CFX55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HexLocalisationExample/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -371,6 +492,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4A19F742854F18B000841C6 /* Debug */,
+				E464828D285CF4EE0090568B /* Development */,
 				E4A19F752854F18B000841C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -380,6 +502,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4A19F772854F18B000841C6 /* Debug */,
+				E464828E285CF4EE0090568B /* Development */,
 				E4A19F782854F18B000841C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

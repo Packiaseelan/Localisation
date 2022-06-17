@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  HexLocalisationExample
+//
+//  Created by Packiaseelan S on 17/06/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+Hex_Localisation_API_Key = qwerty12345_debug
