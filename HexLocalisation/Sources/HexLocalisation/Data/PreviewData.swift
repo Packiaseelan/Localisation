@@ -5,8 +5,6 @@
 //  Created by Packiaseelan S on 17/06/22.
 //
 
-import Foundation
-
 class PreviewData {
     static let shared = PreviewData()
     
