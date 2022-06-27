@@ -15,7 +15,12 @@ class SelectLanguageViewModel: ObservableObject {
     @Published var supportedLanguages: [SupportedLanguage] = []
     
     init() {
-        supportedLanguages = localisation.getSupportedlanguages()
+        Task(priority: .medium) {
+            let lan = await localisation.getSupportedlanguages()
+            DispatchQueue.main.async {
+                self.supportedLanguages = lan
+            }
+        }
     }
     
     func selectLang(languageId: String) {

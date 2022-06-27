@@ -29,8 +29,8 @@ class Localisation: ObservableObject {
         )
     }
     
-    func getSupportedlanguages() -> [SupportedLanguage] {
-        return localisation.getSupportedLanguages()
+    func getSupportedlanguages() async -> [SupportedLanguage] {
+        return await localisation.getSupportedLanguages()
     }
     
     func selectLanguage(languageId: String) {

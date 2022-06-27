@@ -33,7 +33,10 @@ public struct HexLocalisation {
     /// Gets the supported language from coredata.
     /// if its `Empty` them make API call to download.
     ///
-    public func getSupportedLanguages() -> [SupportedLanguage] {
+    public func getSupportedLanguages() async -> [SupportedLanguage]  {
+        // Test GRPC call
+        await TestService.shared.sayHello()
+        
         // get supported languages for appId
         let supported  = repo.getSupportedLanguages()
         if supported.isEmpty {

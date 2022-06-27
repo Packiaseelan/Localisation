@@ -17,6 +17,7 @@
 		E4A19F812854F88D000841C6 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F802854F88D000841C6 /* SelectLanguageView.swift */; };
 		E4A19F84285522AA000841C6 /* LanguageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F83285522AA000841C6 /* LanguageRowView.swift */; };
 		E4A19F8628552960000841C6 /* SelectLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A19F8528552960000841C6 /* SelectLanguageViewModel.swift */; };
+		E4E2DEAC2865FC7F00770204 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2DEAB2865FC7F00770204 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E4A19F802854F88D000841C6 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		E4A19F83285522AA000841C6 /* LanguageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRowView.swift; sourceTree = "<group>"; };
 		E4A19F8528552960000841C6 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
+		E4E2DEAB2865FC7F00770204 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		E4A19F6A2854F18B000841C6 /* HexLocalisationExample */ = {
 			isa = PBXGroup;
 			children = (
+				E4E2DEAA2865FC6500770204 /* Utilities */,
 				E4648291285CF6F30090568B /* Info.plist */,
 				E4648289285CCF830090568B /* config */,
 				E4A19F822855226F000841C6 /* SelectLanguage */,
@@ -124,6 +127,14 @@
 				E4A19F83285522AA000841C6 /* LanguageRowView.swift */,
 			);
 			path = SelectLanguage;
+			sourceTree = "<group>";
+		};
+		E4E2DEAA2865FC6500770204 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E4E2DEAB2865FC7F00770204 /* NetworkManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				E4A19F6E2854F18B000841C6 /* ContentView.swift in Sources */,
 				E4648290285CF53A0090568B /* Configuration.swift in Sources */,
 				E4A19F8628552960000841C6 /* SelectLanguageViewModel.swift in Sources */,
+				E4E2DEAC2865FC7F00770204 /* NetworkManager.swift in Sources */,
 				E4A19F6C2854F18B000841C6 /* HexLocalisationExampleApp.swift in Sources */,
 				E4A19F812854F88D000841C6 /* SelectLanguageView.swift in Sources */,
 				E4A19F7F2854F333000841C6 /* Localisation.swift in Sources */,
